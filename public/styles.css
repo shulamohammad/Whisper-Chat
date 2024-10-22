@@ -1,0 +1,43 @@
+/* Style for the hero section */
+
+
+html, body {
+    height: 100%;
+    margin: 0;  /* Remove default margin */
+}
+
+
+.hero-section {
+    height: 100vh;
+    color: white;
+    background-color: #4d2b68;
+  }
+  
+  h1 {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .lead {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: white;
+  }
+  
+  .btn-warning {
+    background-color:#fe904c;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .btn-warning:hover {
+    background-color: #FF7031;
+    color: white;
+  }
+  
