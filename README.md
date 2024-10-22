@@ -1,1 +1,2 @@
-# Wisper-Chat
+# Whisper-Chat
+Whisper Chat is a real-time anonymous chatting website where users can exchange messages and communicate with another in real time without requiring an account or disclosing who they are. This means that all the users can chat anonymously. With Whisper Chat, users can send messages, receive messages, send files, receive file. It will be designed to handle up to 100 concurrent users. The main focus of the project will be centered around anonymity, giving users private and secure platform, and a friendly user interface that will be easy to use by anyone.
