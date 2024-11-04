@@ -1,43 +1,18 @@
 // Import necessary modules
 import express from 'express';
 import bodyParser from 'body-parser';
-import http from 'http';
-import { Server } from 'socket.io';
-
-
-// db.js
-
-const db = new pg.Client({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'WhisperChat',
-    password: 'Password',
-    port: 5432,
-});
-
-// Connect to the database
-db.connect((err) => {
-    if (err) {
-        console.error('Failed to connect to the database:', err.stack);
-    } else {
-        console.log('Connected to the database');
-    }
-});
-
-// Initialize Express and create an HTTP server
+// Create an instance of Express
 const app = express();
-const server = http.createServer(app);
-const io = new Server(server);
 const port = 3000;
+
 
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
 
-// Middleware to parse URL-encoded request bodies
+// Middleware to parse urlencoded request bodies
 app.use(bodyParser.urlencoded({ extended: true }));
-// Serve static files from the 'public' directory
+// Serve static files from the 'public' and 'uploads' directories
 app.use(express.static('public'));
-
 // Route for the home page
 app.get('/', (req, res) => {
     res.render('home.ejs');
