@@ -1,0 +1,96 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #4c2c6b; /* Remove default margin */
+}
+
+.hero-section {
+  height: 100vh;
+  color: white;
+  background-color: #4d2b68;
+}
+
+h1 {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.lead {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: white;
+}
+.container-fluid {
+  height: 100%; /* Ensure the container takes the full height of the viewport */
+}
+
+.card-container {
+  height: 100%; /* Ensure the card takes the full height of the container */
+  width: 100%; /* Ensure the card takes the full width of the container */
+}
+
+.chat-box {
+  height: 300px; /* Set a fixed height for the chat area */
+  overflow-y: scroll;
+  background-color: #f8f9fa;
+}
+
+.image-loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-warning {
+  background-color:#fe904c;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.25rem;
+  font-family: monospace;
+  font-weight: bold;
+  color: white;
+}
+
+.btn-warning:hover {
+  background-color: #FF7031;
+  color: white;
+}
+
+
+.loader {
+  width: 60px;
+  aspect-ratio: 4; /* Keep aspect ratio fixed */
+  background: radial-gradient(circle closest-side, #fe904c 90%, transparent) 0/calc(100%/3) 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: l1 1s steps(4) infinite;
+}
+
+@keyframes l1 {
+  to {
+      clip-path: inset(0 -34% 0 0);
+  }
+}
+
+.man{
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+}
+.woman{
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+}
+
+.purple{
+  background-color: #4c2c6b;
+}
+.btnsend{
+  background-color:#FF7031 ;
+}
+
+.endChat{
+  background-color: #4c2c6b;
+}
