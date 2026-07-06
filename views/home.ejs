@@ -4,19 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Connect with Strangers</title>
+  <title>Whisper Chat</title>
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
-  <div class="landing vh-100 align-items-center container-fluid hero-section text-center d-flex flex-column justify-content-center align-items-center">
-    <h1 class="display-1">Connect.Converse.<br>Disappear !</h1>
-    <p class="lead">CONNECT WITH STRANGERS AROUND THE WORLD</p>
-    <a href="/chat" class="btnsend btn btn-warning btn-lg">Start Chatting</a>
+<body class="page-home">
+  <div class="home-brand">
+    <img src="/logo.svg" alt="" class="brand-logo" width="34" height="34">
+    <span class="home-brand-name">Whisper Chat</span>
   </div>
+  <main class="landing hero-section">
+    <div class="home-content">
+      <p class="home-eyebrow">Anonymous chat</p>
+      <h1>Connect. Converse.<br>Disappear.</h1>
+      <p class="lead">Talk to strangers around the world,  no account needed.</p>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  
+      <p id="user-count" class="user-count" aria-live="polite">Checking who's online...</p>
+
+      <label class="terms-checkbox">
+        <input type="checkbox" id="terms-agree" aria-describedby="terms-desc">
+        <span>I agree to chat respectfully and understand this is an anonymous service</span>
+      </label>
+      <span id="terms-desc" class="sr-only">You must agree before starting a chat</span>
+
+      <a href="/chat" id="start-btn" class="btn-start" aria-disabled="true" tabindex="-1">Start chatting</a>
+
+      <section class="safety-notice" aria-labelledby="safety-heading">
+        <h2 id="safety-heading">Safety &amp; terms</h2>
+        <ul>
+          <li>Never share personal info, passwords, or payment details.</li>
+          <li>Chats are not stored, they disappear when you leave.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/socket.io/client-dist/socket.io.js"></script>
+  <script src="/js/home.js"></script>
 </body>
 </html>
-

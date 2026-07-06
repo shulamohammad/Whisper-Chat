@@ -1,12 +1,51 @@
 # Whisper-Chat
-Whisper Chat is a real-time anonymous chatting website where users can exchange messages and communicate with another in real time without requiring an account or disclosing who they are. This means that all the users can chat anonymously. With Whisper Chat, users can send messages, receive messages, send files, receive file. It will be designed to handle up to 100 concurrent users. The main focus of the project will be centered around anonymity, giving users private and secure platform, and a friendly user interface that will be easy to use by anyone.
 
-How to run this project:
-1. Open VS Code
-2. Select Clone git Repository
-3. Clone the project by pasting the link in the search bar : https://github.com/shulamohammad/Whisper-Chat
-4. After cloning, open up the terminal in VS Code and type in the following commands:
-  1. npm install
-  2. node index.js
-5. After getting "server is running on port 3000" message, check the port in this link: http://localhost:3000
-6. You should be able to see our project
+Anonymous real-time chat with strangers. No accounts, no history — connect, converse, disappear.
+
+## Features
+
+- Random 1:1 stranger matching with a proper waiting queue
+- Text chat with typing indicators and message bubbles
+- Image sharing (JPEG, PNG, GIF, WebP up to 2 MB)
+- Skip to next stranger
+- Partner disconnect handling with auto-rematch
+- Rate limiting and XSS-safe message rendering
+- Live online user count
+- Optional Redis adapter for multi-instance scaling
+
+## Quick start
+
+```bash
+npm install
+cp .env.example .env   # optional — defaults work fine
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000)
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm start` | Start the server |
+| `npm test` | Run unit tests |
+
+## Configuration
+
+See `.env.example` for all options:
+
+- `PORT` — server port (default 3000)
+- `REDIS_URL` — optional Redis URL for scaling across multiple processes
+- `MAX_MESSAGE_LENGTH` — character limit per message
+- `MAX_MESSAGES_PER_WINDOW` / `RATE_LIMIT_WINDOW_MS` — spam protection
+- `MAX_IMAGE_SIZE_MB` — image upload size limit
+
+## Project structure
+
+```
+index.js          Server (Express + Socket.IO)
+lib/              Matching, rate limiting
+views/            EJS templates (home + chat)
+public/           CSS, client JS, images
+tests/            Unit tests
+```
