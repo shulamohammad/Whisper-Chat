@@ -1,15 +1,23 @@
 {
   "name": "whisper-chat",
   "version": "2.0.0",
-  "description": "Anonymous real-time chat with strangers",
+  "description": "Anonymous real-time chat with strangers — no accounts, no history.",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node index.js",
     "test": "node --test tests/"
   },
-  "keywords": ["chat", "anonymous", "socket.io"],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shulamohammad/Whisper-Chat.git"
+  },
+  "homepage": "https://github.com/shulamohammad/Whisper-Chat#readme",
+  "bugs": {
+    "url": "https://github.com/shulamohammad/Whisper-Chat/issues"
+  },
+  "keywords": ["chat", "anonymous", "socket.io", "stranger-chat", "real-time"],
+  "author": "Sadaf Mohammad",
   "license": "ISC",
   "dependencies": {
     "@socket.io/redis-adapter": "^8.3.0",
